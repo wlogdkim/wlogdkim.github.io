@@ -10,7 +10,7 @@ url:                https://wlogdkim.github.io # main url
 permalink:          /:title # Post permalink
 timezone:           America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
-theme: the-plain
+theme:              the-plain
 
 # Site Build
 highlighter:        rouge
