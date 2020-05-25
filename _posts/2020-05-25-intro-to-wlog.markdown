@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "This is the first post"
+title:  "첫 인사"
 date:   2020-05-25 18:35:00
 ---
 

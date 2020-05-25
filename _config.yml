@@ -17,18 +17,18 @@ sass:
 permalink: /posts/:title/
 texture: 
   title: With Loss of Generality
-  tagline: Any thoughts
+  tagline: Any Thoughts
   date_format: "%b %-d, %Y"
-  style: blue
+  style: black
   showNav: false
   showPicker: false
 
   # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
+#  social_links:
+#    twitter: thelehhman
+#    github:  thelehhman
+#    linkedIn: in/thelehhman
+#    rss: rss
  
 
 # If you want to link only specific pages in your header, uncomment
