@@ -1,4 +1,5 @@
-source "https://rubygems.org" do
-    gem 'the-plain'
-end
+# frozen_string_literal: true
 
+source "https://rubygems.org"
+gemspec
+gem "texture"

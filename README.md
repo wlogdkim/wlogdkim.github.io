@@ -1,60 +1,150 @@
-# The Plain
+# texture
 
-> The Plain is a minimalist Jekyll theme, ideally designed for your personal blog use. This Jekyll theme provides a minimum distraction so you can focus on writing that matters to you and your readers. This theme is originally inspired from [Leonard Lamprecht's _leo_ theme](https://github.com/leo/leo.github.io).
+A configurable jekyll theme for simply beautiful blogs.
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-4.0-green.svg) ![TRAVIS-CI](https://travis-ci.org/heiswayi/the-plain.svg?branch=master)
+**Demo**: [thelehhman.com/texture](https://thelehhman.com/texture)
 
-- **Demo:** https://heiswayi.github.io/the-plain/
+![texture theme preview](/screen1.png)
 
-![SCREENSHOT](https://i.imgur.com/FITKN1H.png)
+
+## Installation on Github Pages
+
+Add this line to your site's `_config.yml`:
+```yaml
+remote_theme: thelehhman/texture
+```
+
+**NOTE: If you are forking this repo, remove `base_url: /texture` in the `_config.yml` which is required to load the required website assets**
+## Installation
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "texture"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: texture
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install texture
 
 ## Usage
 
-### On an unlimited Jekyll host
+The "texture" key in _config.yml is used to customize the theme data.
+```yaml
+texture:
+  title: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
 
-> **NOTE** This does NOT work on GitHub, see the next section.
+  social_links:
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman # format: locale/username
+```
 
-Put this in your *Gemfile*:
+**Styling**
 
-	gem 'the-plain'
+Multiple header styles are supported using the "style" property under texture in `_config.yml`.
 
-and run `bundle install` to install the plugin.
+```yaml
+texture:
+  style: [yellow|red|black|blue|green|purple]
+```
 
-Add this to your sites *_config.yml* file:
+For example, the blue style looks like this:
 
-	theme: the-plain
+![texture theme blue](/screen2.png)
 
-Then copy some of the settings from this repo's *_config.yml* file to your own, and modify them.
 
-### On GitHub
+**Texture Picker**
 
-GitHub - for your user account pages or repository gh-pages - only supports a limited set of themes.
+You can toggle the texture picker to show/experiment various textures on your site using the showPicker variable. Remember to make it `false` for production.
 
-Therefore, you need to use the 'remote\_theme:' setting instead of 'theme:', which is supported by [a 3rd party plugin](https://github.com/benbalter/jekyll-remote-theme).
+```yaml
+texture:
+  showPicker: [false|true] # show the texture selector(development purposes)
+```
 
-Put this in your *Gemfile*:
+**Comments (Disqus)**
 
-	gem 'jekyll-remote-theme'
+Comments on posts can be enabled by specifying your disqus_shortname under texture in `_config.yml`. For example,
+```yaml
+texture:
+  disqus_shortname: games
+```
 
-and run `bundle install` to install the plugin.
+**Google Analytics**
 
-Add the following to your site's *_config.yml* to activate the plugin and to select this theme:
+It can be enabled by specifying your analytics id under texture in `_config.yml`
+```yaml
+texture:
+  analytics_id: '< YOUR ID >'
+```
 
-	plugins:
-	  - jekyll-remote-theme
+**Excerpts**
 
-	remote_theme: heiswayi/the-plain
+Excerpts can be enabled by adding the following line to your `_config.yml`
+```yaml
+show_excerpts: true
+```
 
-This will grab the theme directly from the GitHub repo.
+**Toggle Navbar**
 
-Now copy some of the settings from this repo's *_config.yml* file to your own, and modify them.
+```yaml
+texture:
+  showNav: true
+```
 
-## Authors
+**Navigation**
 
-- [**Heiswayi Nrird**](https://heiswayi.nrird.com)
+After setting `showNav` to true navigation can be built by adding the following to your `_config.yml`
 
-See also the list of [contributors](https://github.com/heiswayi/the-plain/graphs/contributors) who participated in this project.
+```yaml
+texture:
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
+```
+
+**Layouts**
+
+- Home
+- Page
+- Post
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/texture. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `texture.gemspec` accordingly.
+
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
 
 ## License
 
-[MIT](LICENSE)
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More Themes
+[plainwhite](https://github.com/thelehhman/plainwhite-jekyll)

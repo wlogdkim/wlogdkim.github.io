@@ -1,46 +1,44 @@
-# Site Info
-title:              "With Loss of Generality"
-description:        "Any thought posted weekly"
-author_name:        "DKim" # change this to your name
-logo_url:           https://avatars1.githubusercontent.com/u/65877405?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+title: Texture Theme
+author: GitHub User
+email: your-email@domain.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+show_excerpts: true # set to true to show excerpts on the homepage
+remote_theme: thelehhman/texture
+theme: texture
 
-# Site Settings
-url:                https://wlogdkim.github.io # main url
-#baseurl:            /the-plain
-permalink:          /:title # Post permalink
-timezone:           America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-mathjax:            true  # enables support for mathjax - set to 'false' to disable
-theme:              the-plain
-
-# Site Build
-highlighter:        rouge
-markdown:           kramdown
-kramdown:
-input:          GFM
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
-style:          :compressed
+  sass_dir: _sass
 
-# Other Params
-include:            [ "robots.txt" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
+permalink: /posts/:title/
+texture:
+  title: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
+  style: black
+  showNav: false
+  showPicker: true
+
+  # generate social links in footer
+  social_links:
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman
+    rss: rss
+ 
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+# theme: texture
+
 plugins:
-- jekyll-sitemap
-
-
-
-defaults:
--
-scope:
-path:         ""
-values:
-layout:       "null"
--
-scope:
-type:         "pages"
-values:
-layout:       "page"
--
-scope:
-type:         "posts"
-values:
-layout:       "post"
+  - jekyll-seo-tag
+#  - jekyll-feed
