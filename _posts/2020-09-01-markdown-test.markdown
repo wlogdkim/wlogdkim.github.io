@@ -1,3 +1,4 @@
+@@ -1,107 +0,0 @@
 ---
 layout: post
 title:  "Markdown Test"
@@ -105,3 +106,7 @@ term
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+
+### Mathjax
+
+\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
