@@ -3,6 +3,9 @@
 <head>
 	{%- include head.html -%}
 </head>
+{% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
 <body>
 	<header class="texture-{{ site.texture.style }}">
 		<div class="container">
