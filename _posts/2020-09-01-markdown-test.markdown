@@ -5,7 +5,7 @@ date:   2020-09-01 10:15:00
 use_math: true
 ---
 
-# Markdown Cheat Sheet
+<!-- # Markdown Cheat Sheet -->
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
 
