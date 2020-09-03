@@ -2,6 +2,7 @@
 layout: post
 title:  "Markdown Test"
 date:   2020-09-01 10:15:00
+use_math: true
 ---
 
 # Markdown Cheat Sheet
@@ -108,4 +109,5 @@ term
 
 ### Mathjax
 
-\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $
+$$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$
