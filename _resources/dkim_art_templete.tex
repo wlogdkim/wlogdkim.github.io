@@ -1,0 +1,107 @@
+\documentclass{article}
+  
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage[margin=1in]{geometry}
+%\usepackage{setspace}\setstretch{1.2}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage[colorlinks=true, linkcolor=red, citecolor=blue]{hyperref}
+\numberwithin{equation}{section}
+\usepackage{enumitem}
+\setlist[enumerate,1]{label={\upshape(\roman*)}}
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\theoremstyle{proof}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\bS}{\mathbb{S}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cW}{\mathcal{W}}
+
+\newcommand{\sfA}{\mathsf{A}}
+\newcommand{\sfB}{\mathsf{B}}
+\newcommand{\sfC}{\mathsf{C}}
+
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\varep}{\varepsilon}
+\newcommand{\ol}{\overline}
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\dive}{\operatorname{div}}
+
+\renewcommand{\sectionautorefname}{\S}
+
+% Subject Class, Key Words - amsart style
+\makeatletter
+\newcommand{\subjclass}[2][1991]{%
+  \let\@oldtitle\@title%
+  \gdef\@title{\@oldtitle\footnotetext{#1 \emph{Mathematics subject classification.} #2}}%
+}
+\newcommand{\keywords}[1]{%
+  \let\@@oldtitle\@title%
+  \gdef\@title{\@@oldtitle\footnotetext{\emph{Key words and phrases.} #1.}}%
+}
+\makeatother
+
+% Address - amsart style
+\AtEndDocument{\bigskip{\footnotesize%
+  \textsc{Department of Mathematics, University of Illinois at Urbana-Champaign\\
+1409 W Green St, Urbana, IL 61801, USA} \par  
+  \textit{E-mail address:}\texttt{daesungk@illinois.edu} \par
+}}
+
+
+\begin{document}
+
+\title{} 
+\author{}
+\date{\,}
+
+\maketitle
+
+\abstract{
+}
+
+
+\bibliography{}
+\bibliographystyle{amsalpha}
+\end{document}
+

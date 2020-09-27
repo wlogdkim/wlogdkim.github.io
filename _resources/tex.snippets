@@ -13,34 +13,266 @@ def math():
 		return False
 endglobal
 
-snippet template "Basic template" b
-\documentclass[a4paper]{article}
+snippet art-temp "Article template" b
+\documentclass{article}
+  
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage[margin=1in]{geometry}
+%\usepackage{setspace}\setstretch{1.2}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage[colorlinks=true, linkcolor=red, citecolor=blue]{hyperref}
+\numberwithin{equation}{section}
+\usepackage{enumitem}
+\setlist[enumerate,1]{label={\upshape(\roman*)}}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage[dutch]{babel}
-\usepackage{amsmath, amssymb}
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
 
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\theoremstyle{proof}
 
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\bS}{\mathbb{S}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cW}{\mathcal{W}}
+
+\newcommand{\sfA}{\mathsf{A}}
+\newcommand{\sfB}{\mathsf{B}}
+\newcommand{\sfC}{\mathsf{C}}
+
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\varep}{\varepsilon}
+\newcommand{\ol}{\overline}
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\dive}{\operatorname{div}}
+
+\renewcommand{\sectionautorefname}{\S}
+
+% Subject Class, Key Words - amsart style
+\makeatletter
+\newcommand{\subjclass}[2][1991]{%
+  \let\@oldtitle\@title%
+  \gdef\@title{\@oldtitle\footnotetext{#1 \emph{Mathematics subject classification.} #2}}%
 }
+\newcommand{\keywords}[1]{%
+  \let\@@oldtitle\@title%
+  \gdef\@title{\@@oldtitle\footnotetext{\emph{Key words and phrases.} #1.}}%
+}
+\makeatother
 
-\pdfsuppresswarningpagegroup=1
+% Address - amsart style
+\AtEndDocument{\bigskip{\footnotesize%
+  \textsc{Department of Mathematics, University of Illinois at Urbana-Champaign\\
+1409 W Green St, Urbana, IL 61801, USA} \par  
+  \textit{E-mail address:}\texttt{daesungk@illinois.edu} \par
+}}
+
 
 \begin{document}
-	$0
+
+\title{$0} 
+\author{}
+\date{\,}
+
+\maketitle
+
+\abstract{
+}
+
+
+\bibliography{}
+\bibliographystyle{amsalpha}
 \end{document}
 endsnippet
 
+snippet exam-temp "Exam template" b
+\documentclass[addpoints, 12pt, answers]{exam}
+
+\usepackage{setspace}  
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage[margin=1in]{geometry}
+%\usepackage{setspace}\setstretch{1.2}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{hyperref}
+\numberwithin{equation}{section}
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label={\upshape(\roman*)}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\bS}{\mathbb{S}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cW}{\mathcal{W}}
+
+\newcommand{\sfA}{\mathsf{A}}
+\newcommand{\sfB}{\mathsf{B}}
+\newcommand{\sfC}{\mathsf{C}}
+
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\varep}{\varepsilon}
+\newcommand{\ol}{\overline}
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\dive}{\operatorname{div}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\Span}{\operatorname{Span}}
+
+\newcommand{\mula}{\operatorname{m_{alg}}}
+\newcommand{\mulg}{\operatorname{m_{geo}}}
+
+\newcommand{\brk}[1]{
+\left\langle#1\right\rangle}
+\newcommand{\brke}{\langle \cdot,\cdot\rangle}
+
+\renewcommand{\sectionautorefname}{\S}
+
+\newcommand{\der}[2]{\frac{d #1}{d #2}}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+
+
+%% For true/false questions
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+    \ifthenelse{\equal{#1}{T}}{%
+        \textbf{TRUE}\hspace*{14pt}False
+    }{
+        True\hspace*{14pt}\textbf{FALSE}
+    }
+\else
+    {True}\hspace*{20pt}False
+\fi
+} 
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{1.3in}}
+\newcommand\TFQuestion[2]{%
+    \setlength\TFlengthB{\linewidth}
+    \addtolength\TFlengthB{-\TFlengthA}
+    \parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+
+
+
+\pagestyle{headandfoot}
+\runningheadrule
+\runningheader{Course number}{Title }{Semester}
+\firstpagefooter{}{Page \thepage\ of \numpages}{}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\begin{document}
+
+\noindent
+{\bf\Large $0}\\
+
+\begin{questions}
+$1 
+
+
+\end{questions}
+\end{document}
+
+endsnippet
+
+snippet question-temp "Exam question template" b
+\question $0
+\begin{solution}
+\end{solution}
+endsnippet
+snippet mcquestion-temp "Exam question template" b
+\question $0
+\begin{choices}	
+\CorrectChoice 
+\choice 
+\choice 
+\choice 
+\choice 
+\end{choices}
+\begin{solution}
+\end{solution}
+endsnippet
 snippet beg "begin{} / end{}" bA
 \\begin{$1}
 	$0
