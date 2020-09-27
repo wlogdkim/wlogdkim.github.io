@@ -29,6 +29,7 @@ Plug 'w0rp/ale'
 Plug 'davidhalter/jedi-vim'
 
 call plug#end()
+
 " live preview
 let g:livepreview_previewer = 'zathura'
 " vimtex
